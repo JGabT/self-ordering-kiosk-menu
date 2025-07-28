@@ -18,11 +18,11 @@ public class displayMenus {
     }
 
     public int orderMenu(int option) {
-        return (option >= 1 && option <= 5) ? option : -1;
+        return (option >= 1 && option <= 6) ? option : -1;
     }
 
     public int orderSubmenu(int option, int quantity) {
-        return (option >= 1 && option <= 5 && quantity > 0) ? option + quantity : -1;
+        return (option >= 1 && option <= 6 && quantity > 0) ? option + quantity : -1;
     }
 
     public int cartMenu(int option, int quantity) {
