@@ -7,7 +7,7 @@ public class Drink implements MenuItem {
     public Drink(String name, String size, double price, boolean isCold) {
         this.name = name;
         this.size = size;
-        this.price = price;
+        this.price = (price >= 0) ? price : 0.0;
         this.isCold = isCold;
     }
 
@@ -21,11 +21,6 @@ public class Drink implements MenuItem {
 
     public double getPrice() {
         return price;
-    }
-
-    @Override
-    public String getDetails() {
-        return "";
     }
 
     public boolean isCold() {

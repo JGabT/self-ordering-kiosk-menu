@@ -6,7 +6,7 @@ public class Fries implements MenuItem {
     public Fries(String name, String size, double price) {
         this.name = name;
         this.size = size;
-        this.price = price;
+        this.price = (price >= 0) ? price : 0.0;
     }
 
     public String getName() {
@@ -19,10 +19,5 @@ public class Fries implements MenuItem {
 
     public double getPrice() {
         return price;
-    }
-
-    @Override
-    public String getDetails() {
-        return "";
     }
 }

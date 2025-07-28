@@ -1,14 +1,12 @@
 public class Burger implements MenuItem {
     private String name;
-    private String size;
     private double price;
     private boolean hasCheese;
     private boolean hasBacon;
 
-    public Burger(String name, String size, double price, boolean hasCheese, boolean hasBacon) {
+    public Burger(String name, double price, boolean hasCheese, boolean hasBacon) {
         this.name = name;
-        this.size = size;
-        this.price = price;
+        this.price = (price >= 0) ? price : 0.0;
         this.hasCheese = hasCheese;
         this.hasBacon = hasBacon;
     }
@@ -17,24 +15,16 @@ public class Burger implements MenuItem {
         return name;
     }
 
-    public String getSize() {
-        return size;
-    }
 
     public double getPrice() {
         return price;
     }
 
-    @Override
-    public String getDetails() {
-        return "";
-    }
-
-    public boolean getCheese() {
+    public boolean hasCheese() {
         return hasCheese;
     }
 
-    public boolean getBacon() {
+    public boolean hasBacon() {
         return hasBacon;
     }
 }
